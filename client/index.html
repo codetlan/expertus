@@ -3,6 +3,9 @@
 </head>
 <body>
   <div class = "container">
-  	{{loginButtons}}
+      {{> header}}
+      {{#if currentUser}}
+        {{> edit_profile}}
+      {{/if}}
   </div>
 </body>
