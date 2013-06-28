@@ -1,0 +1,29 @@
+<template name = "header">
+    <div style="position:absolute; right:50px;">
+        {{> user_info}}
+    </div>
+</template>
+
+<template name="user_info">
+    {{#if currentUser}}
+        {{> user_loggedIn}}
+    {{else}}
+        {{> user_loggedOut}}
+    {{/if}}
+</template>
+
+<template name="user_loggedIn">
+    {{#if loggingIn}}
+        Logging in...
+    {{else}}
+        <div id="profile">
+            <img style="height:32px; width: 32px; margin-top: 4px;" src="{{currentUser.profile.picture}}"/>
+            {{currentUser.profile.name}}
+        </div>
+        <a href="#" id="logout">Logout</a>
+    {{/if}}
+</template>
+
+<template name="user_loggedOut">
+    <a href="#" id="login">Login with Google</a>
+</template>
