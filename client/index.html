@@ -3,7 +3,16 @@
 </head>
 <body>
   <div class = "container">
-  	{{loginButtons}}
+      {{> header}}
+      {{#if currentUser}}
+          <a href="/users/edit/{{currentUser._id}}">Editar usuario</a>
+          <a href="/users/profile/{{currentUser._id}}">profile</a>
+          <a href="/">home</a>
+      {{/if}}
+<br>
+      <br>
+      <br>
+      {{renderPage}}
   </div><br>
   <div>
       {{> mentorship_form}}<br>
