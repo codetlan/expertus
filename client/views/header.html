@@ -16,10 +16,8 @@
     {{#if loggingIn}}
         Logging in...
     {{else}}
-        <div id="profile">
-            <img style="height:32px; width: 32px; margin-top: 4px;" src="{{currentUser.profile.picture}}"/>
-            {{currentUser.profile.name}}
-        </div>
+        <img style="height:32px; width: 32px; margin-top: 4px;" src="{{currentUser.profile.picture}}"/>
+        {{currentUser.profile.name}}
         <a href="#" id="logout">Logout</a>
     {{/if}}
 </template>

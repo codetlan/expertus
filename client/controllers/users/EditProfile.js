@@ -14,8 +14,8 @@ Template.edit_user.helpers({
 
 Template.edit_user.events({
     "click #btn_cancel_edit_profile": function (e, tmpl) {
-        e.preventDefault();
-        $('#form_edit_profile').hide();
+        window.location.href = "/";
+
     },
     "click #btn_save_edit_profile": function (e, tmpl) {
         e.preventDefault();
@@ -33,6 +33,5 @@ Template.edit_user.events({
                 profile: userProf
             }
         });
-
     }
 });
