@@ -1,5 +1,5 @@
 <template name="edit_user">
-    <form id="form_edit_profile" style="display:none; margin-top: 100px; position:absolute; right:50px;">
+    <form id="form_edit_profile">
         Nombres: <input type="text" name="given_name" value="{{{user.profile.given_name}}}"><br>
         Apellidos: <input type="text" name="family_name" value="{{{user.profile.family_name}}}"><br>
         Título: <input type="text" name="title" value="{{{user.profile.title}}}"><br>
@@ -9,5 +9,4 @@
         <button id="btn_cancel_edit_profile" type="cancel">Cancelar</button>
         <button id="btn_save_edit_profile" type="submit">Guardar</button>
     </form>
-    asdasdsa
 </template>

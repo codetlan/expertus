@@ -22,8 +22,5 @@ Template.user_loggedIn.events({
                 throw err;
             }
         })
-    },
-    "click #profile": function (e, tmpl) {
-        $('#form_edit_profile').show();
     }
 });
