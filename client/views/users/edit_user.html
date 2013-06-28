@@ -1,3 +1,13 @@
-<template name ="edit_user">
-	<h1>historys</h1>
+<template name="edit_user">
+    <form id="form_edit_profile" style="display:none; margin-top: 100px; position:absolute; right:50px;">
+        Nombres: <input type="text" name="given_name" value="{{{user.profile.given_name}}}"><br>
+        Apellidos: <input type="text" name="family_name" value="{{{user.profile.family_name}}}"><br>
+        Título: <input type="text" name="title" value="{{{user.profile.title}}}"><br>
+        Biografía: <input type="text" name="bio" value="{{{user.profile.bio}}}"><br>
+        Email: <input type="text" name="email" value="{{{user.profile.email}}}" disabled="disabled"><br>
+        Foto: <input type="text" name="picture" value="{{{user.profile.picture}}}" disabled="disabled"><br>
+        <button id="btn_cancel_edit_profile" type="cancel">Cancelar</button>
+        <button id="btn_save_edit_profile" type="submit">Guardar</button>
+    </form>
+    asdasdsa
 </template>

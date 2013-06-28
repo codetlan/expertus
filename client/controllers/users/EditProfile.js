@@ -5,14 +5,14 @@
  * Time: 15:39
  * To change this template use File | Settings | File Templates.
  */
-Template.edit_profile.helpers({
+Template.edit_user.helpers({
     user: function () {
         var user = Meteor.user();
         return user;
     }
 });
 
-Template.edit_profile.events({
+Template.edit_user.events({
     "click #btn_cancel_edit_profile": function (e, tmpl) {
         e.preventDefault();
         $('#form_edit_profile').hide();
