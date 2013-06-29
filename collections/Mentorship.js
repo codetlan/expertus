@@ -1,2 +1,2 @@
-var Mentorships = new Meteor.Collection("mentorships");
+Mentorships = new Meteor.Collection("mentorships");
 
