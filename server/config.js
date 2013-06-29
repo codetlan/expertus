@@ -10,10 +10,3 @@ Accounts.loginServiceConfiguration.insert({
 	// secret:'fPnDHtRpLs0bcs8e7tqx8Bws'
 }); 
 
-
-
-// Mentorships
-
-var Mentorships = new Meteor.Collection("mentorships");
-
-
