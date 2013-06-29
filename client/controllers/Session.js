@@ -20,6 +20,8 @@ Template.user_loggedIn.events({
         Meteor.logout(function (err) {
             if (err) {
                 throw err;
+            } else {
+                window.location.href = "/";
             }
         })
     }

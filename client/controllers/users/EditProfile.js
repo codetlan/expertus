@@ -14,6 +14,7 @@ Template.edit_user.helpers({
 
 Template.edit_user.events({
     "click #btn_cancel_edit_profile": function (e, tmpl) {
+        e.preventDefault();
         window.location.href = "/";
 
     },
