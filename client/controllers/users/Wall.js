@@ -8,8 +8,11 @@ Template.user_wall.helpers({
 
 
 Template.comments_list.comments = function () { //traemos la lista de los frameworks
-    var wall = Walls.findOne({ user_id :Meteor.user()._id });
-    var comments = wall && wall.comments;
+    var wall, comments;
+    if(Meteor.user()){
+        wall = Walls.findOne({ user_id :Meteor.user()._id });
+        comments = wall && wall.comments;
+    }
     return comments;
 };
 
