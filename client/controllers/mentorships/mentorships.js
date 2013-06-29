@@ -1,6 +1,3 @@
-// Mentorships
-var Mentorships = new Meteor.Collection("mentorships");
-
 // List Mentorships
 Template.mentorship_list.mentorships = function () {
     return Mentorships.find();
@@ -46,16 +43,31 @@ Template.mentorship_form.events({
 
 //Edit Mentorship
 Template.mentorship_list.events({
-    'click #edit_mentorship': function (e, tmpl) {
+    'click .edit_mentor': function (e, tmpl) {
         var form = $('#form_mentorship');
         Session.set("current_mentorship", this);
         form.show();
+    },
+    'click .start_mentoring': function(){
+        Sessions.insert({
+            user_id: Meteor.user()._id,
+            vote:{
+                mentor_id: 'mentor',
+                user_id: 'user'
+            },
+            comments: 'comments',
+            online_time: new Date(),
+            time: new Date(),
+            finish_time: new Date(),
+            cost: 100,
+            total_cost: 1000
+        });
     }
 });
 
 Template.mentorship_form.helpers({
     mentorship: function (argument) {
-        var current_mentorship = Session.get("current_mentorship")
+        var current_mentorship = Session.get("current_mentorship");
         return current_mentorship;
     }
 });
