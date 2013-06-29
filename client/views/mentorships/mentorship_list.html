@@ -1,0 +1,8 @@
+<template name="mentorship_list">
+    {{#each mentorships}}
+        <div>Nombre: {{name}}</div>
+        <div>Descripcion: {{description}}</div>
+        <div>Categoria: {{category}}</div>
+        <div><button class="edit_mentor">Editar</button>&nbsp;&nbsp;<button class="start_mentoring">Iniciar Mentoria</button></div><br>
+    {{/each}}
+</template>

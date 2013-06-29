@@ -1,0 +1,15 @@
+<template name="mentorship_form">
+    <button id="show_form">Crear Mentoria</button>
+    <form id="form_mentorship" hidden="true">
+        Introduce Datos de la Mentoria<br>
+        <label>Nombre de la mentoria</label>
+        <input type="text" name="id" hidden="true" value="{{mentorship._id}}">
+        <input type="text" name="name" placeholder="Mentoria" value="{{mentorship.name}}"><br>
+        <label>Descripcion</label>
+        <input type="text" name="description" placeholder="Descripcion" value="{{mentorship.description}}"><br>
+        <label>Categoria</label>
+        <input type="text" name="category" placeholder="Categoria" value="{{mentorship.category}}"><br>
+        <button id="cancel_mentorship" type="submit">Cancelar</button>
+        <button id="submit_mentorship" type="submit">Guardar</button>
+    </form><br>
+</template>

@@ -9,3 +9,4 @@ Accounts.loginServiceConfiguration.insert({
 	// clientId:'410190650489-el57t32a5vrsth1k6uprrf380bcpjvu9.apps.googleusercontent.com',
 	// secret:'fPnDHtRpLs0bcs8e7tqx8Bws'
 }); 
+
