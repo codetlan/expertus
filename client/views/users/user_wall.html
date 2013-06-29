@@ -1,0 +1,24 @@
+<template name ="user_wall">
+	<h1>this is the wall</h1>
+	{{>comments_list}}
+	{{>add_comment}}
+</template>
+
+<template name="add_comment">
+  	<div class="form-inline">
+  		<input id ="comment-text" type="text" class="input-large" placeholder="Add framework">
+  		<button type="submit" class="btn btn-primary">Add Comment</button>
+	</div><br>
+</template>
+
+<template name="comments_list">
+  	{{#each comments}}
+    	{{> comment}}
+	{{/each}} 
+</template>
+
+<template name="comment">
+  	<div>
+  		{{text}}
+  	</div>
+</template>

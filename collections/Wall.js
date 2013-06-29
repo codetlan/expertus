@@ -1,4 +1,4 @@
-var Walls = new Meteor.Collection("walls");
+Walls = new Meteor.Collection("walls");
 
 Meteor.methods({
   wall: function(user){
