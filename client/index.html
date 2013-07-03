@@ -2,20 +2,5 @@
   <title>Expertus</title>
 </head>
 <body>
-  <div class = "container">
-      {{> header}}
-      {{#if currentUser}}
-          <a href="/users/edit/{{currentUser._id}}">Editar usuario</a>
-          <a href="/users/profile/{{currentUser._id}}">profile</a>
-          <a href="/">home</a>
-          <a href="/" id>wall</a>
-          {{>user_wall}}    
-      {{/if}}
-      <br>
-      <br>
-      <br>
       {{renderPage}}
-      <br>
-
-  </div>
 </body>
