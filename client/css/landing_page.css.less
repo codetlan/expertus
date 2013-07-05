@@ -8,15 +8,28 @@
 	height: 100px;
 	background: @header_white;
 	border-radius: 0;
-}
-
-ul.menu-landing-page{
-	li{
-		margin-top: 25px;
-		background-color: @header_white;
-		.active{
-			color: @red_color;
+	div.logo{
+		img{
+			margin-left: 12.5%;
+			margin-top: 15px;
 		}
+	}
+	.menu-landing-page{
+		margin-top: -45px;
+		margin-right: 12.5%;
+		ul{
+			list-style:none;
+			li{
+				float:left;
+				padding-right: 20px;
+			}
+		}
+		a{
+			float: left;
+			color: @red_color;
+			font-family:@font_homenaje;
+			font-size: @normal_text_size;
+		}	
 	}
 }
 
@@ -30,11 +43,12 @@ ul.menu-landing-page{
 		font-family:@font_homenaje;
 		font-size: 46px;
 		margin-top: 40px;
+		margin-left: 12.5%;
 	}
 }
-.start-text{
-	margin-right: 240px;
+.start-img{
 	margin-top: -30px;
+	margin-right: 12.5%;
 }
 .grig-images-landing{
 	width: 100%;
