@@ -1,6 +1,8 @@
-@red_color : #F14B39;
+@red_color : #f14b39;
 @header_white: #FFF;
-@header_dark: #333333;
+@dark: #2a2a2a;
+@font_homenaje:'Homenaje', sans-serif;
+@normal_text_size:26px;
 
 .expertus-bar{
 	height: 100px;
@@ -22,17 +24,36 @@ ul.menu-landing-page{
 	height: 100px;
 	border: none;
 	border-radius: 0;
-	background: @header_dark;
+	background: @dark;
 	.header-text{
 		color: @red_color;
+		font-family:@font_homenaje;
+		font-size: 46px;
+		margin-top: 40px;
 	}
+}
+.start-text{
+	margin-right: 240px;
+	margin-top: -30px;
 }
 .grig-images-landing{
 	width: 100%;
 	margin-top: -20px;
+	padding-bottom: 37px;
+	background: @dark;
+	height: 450px;
+	margin-right: auto;
+	margin-left: auto;
 	img{
 		float: left;
-		width: 240px;
+		width: 12.5%;
 		height: 150px;
 	}
+}
+.steps{
+	height: 600px;
+}
+.footer{
+	height: 100px;
+	background: @dark;
 }
