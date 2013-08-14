@@ -5,24 +5,29 @@
  * Time: 15:41
  * To change this template use File | Settings | File Templates.
  */
-Template.user_loggedOut.events({
-    "click #login": function (e, tmpl) {
-        Meteor.loginWithGoogle(function (err) {
-            if (err) {
-                throw err;
-            }
-        })
+Template.landing_page.events({
+    "click .start-img": function (e, tmpl) {
+        Meteor.loginWithGoogle(
+            null,
+            function (err) {
+                if (err) {
+                    throw err;
+                } else {
+                    window.location.href = "/home";
+                }
+            });
     }
 });
 
 Template.user_loggedIn.events({
     "click #logout": function (e, tmpl) {
-        Meteor.logout(function (err) {
-            if (err) {
-                throw err;
-            } else {
-                window.location.href = "/";
-            }
-        })
+        Meteor.logout(
+            function (err) {
+                if (err) {
+                    throw err;
+                } else {
+                    window.location.href = "/";
+                }
+            })
     }
 });

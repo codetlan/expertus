@@ -1,14 +1,27 @@
 <template name = "header">
-    <div style="position:absolute; right:50px;">
-        {{> user_info}}
-    </div>
+    <div class="navbar ">
+        <div class="navbar-inner expertus-bar-home">
+            <div class="container row-fluid">
+                <div class="span6">
+                    <div class="logo">
+                        <img src="./images/logo.png" alt="">
+                    </div>
+                </div>
+                <div class="span6">
+                    <div class="menu-home pull-right">
+                    {{> user_info}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br>
+    {{> mentorship_list}}
 </template>
 
 <template name="user_info">
     {{#if currentUser}}
         {{> user_loggedIn}}
     {{else}}
-        {{> user_loggedOut}}
     {{/if}}
 </template>
 
@@ -16,12 +29,8 @@
     {{#if loggingIn}}
         Logging in...
     {{else}}
-        <img style="height:32px; width: 32px; margin-top: 4px;" src="{{currentUser.profile.picture}}"/>
+        <img style="height:32px; width: 32px;" src="{{currentUser.profile.picture}}"/>
         {{currentUser.profile.name}}
         <a href="#" id="logout">Logout</a>
     {{/if}}
-</template>
-
-<template name="user_loggedOut">
-    <a href="#" id="login">Login with Google</a>
 </template>

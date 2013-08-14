@@ -9,5 +9,5 @@ Meteor.Router.add({
   	return 'profile';
   },
 
-  '*': 'not_found'
+  '/home':  'header'
 });
